@@ -46,7 +46,17 @@
       h1 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
-        font-weight: 500;
+        font-weight: 300; /* fonte mais fina */
+        line-height: 2.2rem;
+      }
+
+      /* Responsivo para celular */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem; /* um pouco menor para celular */
+          font-weight: 300;
+          line-height: 1.8rem;
+        }
       }
 
       p {
@@ -71,6 +81,7 @@
     <div class="container">
       <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
       <h1>Bem-vindo à Etheris</h1>
+      <p>Você está entrando em nossa loja.</p>
     </div>
   </body>
 </html>
