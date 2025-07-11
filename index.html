@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etheris | Loja Oficial</title>
-    <link rel="icon" href="Etheris-F.png" type="image/png" />
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-        background-color: #f9f9f9;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: #111;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etheris | Loja Oficial</title>
+  <link rel="icon" href="Etheris-F.png" type="image/png" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200% !important;
+      height: 200% !important;
+      background: url('smoke2.png') repeat;
+      background-position: 0 0;
+      opacity: 0.25;
+      animation: drift 60s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-25%, -25%); }
+    }
+
+    @media (max-width: 600px) {
       .background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 200%;
-        height: 200%;
-        background: url('smoke2.png') repeat;
-        background-position: 0 0;
-        opacity: 0.25;
-        animation: drift 60s linear infinite;
-        z-index: 0;
+        width: 150% !important;
+        height: 150% !important;
+        animation-duration: 90s;
+        background-position: 25% 0;
+        animation-name: drift-mobile;
       }
 
-      @keyframes drift {
-        0% { transform: translate(0, 0); }
-        100% { transform: translate(-25%, -25%); }
+      @keyframes drift-mobile {
+        0% { transform: translate(-25%, 0); }
+        100% { transform: translate(0, -25%); }
       }
+    }
 
-      @media (max-width: 600px) {
-        .background {
-          width: 150% !important;
-          height: 150% !important;
-          animation-name: drift-horizontal;
-          animation-duration: 90s;
-          background-position: 100% 0; /* começa da direita */
-        }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+      line-height: 2.2rem;
+    }
 
-        @keyframes drift-horizontal {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(-25%, 0); } /* move para a esquerda */
-        }
-      }
+    p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
 
-      h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
-        font-weight: 300;
-        line-height: 2.2rem;
-      }
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
 
-      p {
-        font-size: 1rem;
-        color: #444;
-        margin-bottom: 2rem;
-      }
-
-      .container {
-        position: relative;
-        z-index: 1;
-        padding: 2rem;
-      }
-
-      .logo {
-        width: 120px;
-        margin-bottom: 1rem;
-      }
-    </style>
-    <script>
-      setTimeout(() => {
-        window.location.href = "https://www.etheris.com.br";
-      }, 3100);
-    </script>
-  </head>
-  <body>
-    <div class="background"></div>
-    <div class="container">
-      <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
-      <h1>Bem-vindo à Etheris</h1>
-      <p>Você está entrando em nossa loja.</p>
-    </div>
-  </body>
+    .logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://www.etheris.com.br";
+    }, 3100);
+  </script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <img
+      src="https://www.etheris.com.br/logo.svg"
+      alt="Etheris Logo"
+      class="logo"
+      onerror="this.style.display='none'"
+    />
+    <h1>Bem-vindo à Etheris</h1>
+    <p>Você está entrando em nossa loja.</p>
+  </div>
+</body>
 </html>
