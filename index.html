@@ -44,7 +44,15 @@
         z-index: 1;
         padding: 2rem;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.4s ease;
+      }
+
+      .logo {
+        width: 120px;
+        height: 40px; /* RESERVA espaço fixo */
+        margin-bottom: 1rem;
+        display: block;
+        object-fit: contain;
       }
 
       h1 {
@@ -62,19 +70,12 @@
         color: #444;
         margin-bottom: 2rem;
       }
-
-      .logo {
-        width: 120px;
-        margin-bottom: 1rem;
-      }
     </style>
     <script>
-      // Redirecionamento após 3,1s
       setTimeout(() => {
         window.location.href = "https://www.etheris.com.br";
       }, 3100);
 
-      // Ativa fade-in após carregamento completo
       window.addEventListener("load", () => {
         document.querySelector(".container").style.opacity = "1";
       });
@@ -83,7 +84,11 @@
   <body>
     <div class="background"></div>
     <div class="container">
-      <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
+      <img
+        src="https://www.etheris.com.br/logo.svg"
+        alt="Etheris Logo"
+        class="logo"
+        onerror="this.style.display='none'" />
       <h1>Bem-vindo à Etheris</h1>
       <p>Você está entrando em nossa loja.</p>
     </div>
