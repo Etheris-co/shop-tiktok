@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,38 +19,33 @@
       height: 100vh;
       text-align: center;
       overflow: hidden;
+      position: relative;
     }
 
     .smoke {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(240,240,240,0.6) 0%, rgba(249,249,249,0.9) 100%);
-      animation: smokeMove 3s ease-in-out forwards;
-      opacity: 0;
-      pointer-events: none;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle, rgba(100,120,140,0.08) 0%, rgba(240,240,240,0.05) 70%);
+      animation: floatSmoke 6s ease-in-out infinite alternate;
+      z-index: 0;
+      opacity: 0.8;
     }
 
-    @keyframes smokeMove {
+    @keyframes floatSmoke {
       0% {
-        opacity: 0;
-        transform: scale(1) translate(0, 0);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.2) translate(-10px, -10px);
+        transform: translate(0px, 0px) scale(1);
       }
       100% {
-        opacity: 0;
-        transform: scale(1.5) translate(-20px, -20px);
+        transform: translate(40px, -40px) scale(1.1);
       }
     }
 
     .container {
-      padding: 2rem;
       z-index: 1;
+      padding: 2rem;
     }
 
     h1 {
@@ -70,18 +65,20 @@
       margin-bottom: 1rem;
     }
   </style>
+
   <script>
     setTimeout(() => {
       window.location.href = "https://www.etheris.com.br";
-    }, 3000); // 3 segundos
+    }, 3000); // redireciona após 3 segundos
   </script>
 </head>
+
 <body>
   <div class="smoke"></div>
   <div class="container">
     <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
     <h1>Bem-vindo à Etheris</h1>
-    <p>Você está entrando em nossa loja.</p>
+    <p>Você está entrando em nossa loja oficial.</p>
   </div>
 </body>
 </html>
