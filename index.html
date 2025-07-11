@@ -37,32 +37,31 @@
         100% { transform: translate(-25%, -25%); }
       }
 
-      .container {
-        position: relative;
-        z-index: 1;
-        padding: 2rem;
+      @media (max-width: 600px) {
+        .background {
+          width: 150%;
+          height: 150%;
+          animation-duration: 90s;
+        }
       }
 
       h1 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
-        font-weight: 300; /* fonte mais fina */
+        font-weight: 300;
         line-height: 2.2rem;
-      }
-
-      /* Responsivo para celular */
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 1.5rem; /* um pouco menor para celular */
-          font-weight: 300;
-          line-height: 1.8rem;
-        }
       }
 
       p {
         font-size: 1rem;
         color: #444;
         margin-bottom: 2rem;
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
       }
 
       .logo {
@@ -79,9 +78,14 @@
   <body>
     <div class="background"></div>
     <div class="container">
-      <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
+      <img
+        src="https://www.etheris.com.br/logo.svg"
+        alt="Etheris Logo"
+        class="logo"
+        onerror="this.style.display='none'"
+      />
       <h1>Bem-vindo à Etheris</h1>
-      <p>Você está entrando em nossa loja</p>
+      <p>Você está entrando em nossa loja.</p>
     </div>
   </body>
 </html>
