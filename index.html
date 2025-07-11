@@ -12,14 +12,12 @@
         height: 100%;
         overflow: hidden;
         background-color: #f9f9f9;
-        font-family: system-ui;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         color: #111;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
       }
 
       .background {
@@ -43,56 +41,35 @@
         position: relative;
         z-index: 1;
         padding: 2rem;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-      }
-
-      .logo {
-        width: 120px;
-        height: 40px;
-        margin-bottom: 1rem;
-        display: block;
-        object-fit: contain;
       }
 
       h1 {
         font-size: 1.8rem;
-        line-height: 2.2rem;
-        min-height: 2.2rem;
-        font-weight: 500;
         margin-bottom: 0.5rem;
+        font-weight: 500;
       }
 
       p {
         font-size: 1rem;
-        line-height: 1.5rem;
-        min-height: 1.5rem;
         color: #444;
         margin-bottom: 2rem;
       }
+
+      .logo {
+        width: 120px;
+        margin-bottom: 1rem;
+      }
     </style>
     <script>
-      // Redireciona após 3,1 segundos
       setTimeout(() => {
         window.location.href = "https://www.etheris.com.br";
       }, 3100);
-
-      // Ativa fade-in após carregamento completo
-      window.addEventListener("load", () => {
-        document.querySelector(".container").style.opacity = "1";
-      });
     </script>
   </head>
   <body>
     <div class="background"></div>
     <div class="container">
-      <img
-        src="https://www.etheris.com.br/logo.svg"
-        alt="Etheris Logo"
-        class="logo"
-        width="120"
-        height="40"
-        onerror="this.style.display='none'" />
+      <img src="https://www.etheris.com.br/logo.svg" alt="Etheris Logo" class="logo" onerror="this.style.display='none'" />
       <h1>Bem-vindo à Etheris</h1>
       <p>Você está entrando em nossa loja.</p>
     </div>
