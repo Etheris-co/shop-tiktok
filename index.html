@@ -29,6 +29,7 @@
         height: 200%;
         background: url('smoke2.png') repeat;
         background-position: 0 0;
+        background-size: auto;
         opacity: 0.25;
         animation: drift 60s linear infinite;
         z-index: 0;
@@ -39,22 +40,27 @@
         100% { transform: translate(-25%, -25%); }
       }
 
-      /* MOBILE - Somente abaixo de 600px */
+      /* ✅ Estilo exclusivo para MOBILE */
       @media (max-width: 600px) {
         .background {
           width: 100vw !important;
           height: 100vh !important;
-          background-image: url('smoke2.png') !important;
           background-repeat: no-repeat !important;
           background-size: cover !important;
           background-position: center center !important;
-          animation: drift-horizontal 80s linear infinite !important;
+          animation: drift-mobile 90s linear infinite !important;
         }
 
-        @keyframes drift-horizontal {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-5vw); }
+        @keyframes drift-mobile {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-10vw); }
         }
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
       }
 
       h1 {
@@ -69,12 +75,6 @@
         font-size: 9px;
         color: #444;
         margin-bottom: 2rem;
-      }
-
-      .container {
-        position: relative;
-        z-index: 1;
-        padding: 2rem;
       }
 
       .logo {
