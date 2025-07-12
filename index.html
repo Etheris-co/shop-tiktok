@@ -32,6 +32,7 @@
         opacity: 0.25;
         animation: drift 60s linear infinite;
         z-index: 0;
+        background-size: cover;
       }
 
       @keyframes drift {
@@ -41,17 +42,17 @@
 
       @media (max-width: 600px) {
         .background {
-          width: 300% !important;
-          height: 1000% !important;
-          background-position: 60% 80% !important; /* Ajusta horizontal e vertical */
-          background-size: cover !important;       /* Mantém proporção e preenche */
+          width: 1920px !important;
+          height: 1080px !important;
+          background-size: auto !important;
+          background-position: center top !important;
           animation-name: drift-horizontal;
           animation-duration: 90s;
         }
 
         @keyframes drift-horizontal {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(-25%, 0); }
+          100% { transform: translate(-10%, 0); }
         }
       }
 
