@@ -41,16 +41,18 @@
 
       @media (max-width: 600px) {
         .background {
-          width: 300% !important;
-          height: 2000% !important;
-          background-position: 50% 50% !important; /* centraliza horizontal e verticalmente */
+          width: 100vw !important;
+          height: 100vh !important;
+          background-size: cover !important;
+          background-position: center center !important;
+          background-repeat: no-repeat !important;
           animation-name: drift-horizontal;
           animation-duration: 90s;
         }
 
         @keyframes drift-horizontal {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(-15%, 0); }
+          100% { transform: translate(-5%, 0); }
         }
       }
 
