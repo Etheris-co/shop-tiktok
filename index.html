@@ -42,17 +42,17 @@
 
       @media (max-width: 600px) {
         .background {
-          width: 2400px !important;
-          height: 1350px !important;
-          background-size: auto !important;
-          background-position: center top !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          background-size: contain !important;
+          background-position: center center !important;
           animation-name: drift-horizontal;
           animation-duration: 90s;
         }
 
         @keyframes drift-horizontal {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(-10%, 0); }
+          100% { transform: translate(-5%, 0); }
         }
       }
 
