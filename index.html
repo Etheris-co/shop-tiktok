@@ -55,16 +55,16 @@
   /* MOBILE */
   @media (max-width: 600px) {
     .background {
-      width: 100vw !important;
-      height: 100vh !important;
+      width: 120vw !important; /* maior que a viewport */
+      height: 120vh !important;
       background-size: contain !important;
       background-position: center center !important;
       background-repeat: no-repeat !important;
-      animation: drift-mobile 60s linear infinite !important;
+      animation: drift-mobile 80s linear infinite !important;
     }
     @keyframes drift-mobile {
       0% { transform: translateX(0); }
-      50% { transform: translateX(-5vw); }
+      50% { transform: translateX(-7vw); } /* um pouco mais de movimento */
       100% { transform: translateX(0); }
     }
   }
