@@ -32,7 +32,6 @@
         opacity: 0.25;
         animation: drift 60s linear infinite;
         z-index: 0;
-        background-size: cover;
       }
 
       @keyframes drift {
@@ -42,18 +41,16 @@
 
       @media (max-width: 600px) {
         .background {
-          width: 100vw !important;
-          height: 100vh !important;
-          background-size: cover !important;
-          background-position: center center !important;
-          background-repeat: no-repeat !important;
+          width: 300% !important;
+          height: 2000% !important;
+          background-position: 75% 50% !important; /* ajusta a posição inicial para mais centralizada */
           animation-name: drift-horizontal;
           animation-duration: 90s;
         }
 
         @keyframes drift-horizontal {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(-5%, 0); }
+          100% { transform: translate(-15%, 0); } /* movimento horizontal suave menor que antes */
         }
       }
 
