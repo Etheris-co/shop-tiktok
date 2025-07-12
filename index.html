@@ -30,7 +30,7 @@
         background: url('smoke2.png') repeat;
         background-position: 0 0;
         opacity: 0.25;
-        animation: drift 120s linear infinite; /* velocidade reduzida no PC */
+        animation: drift 120s linear infinite;
         z-index: 0;
       }
 
@@ -46,10 +46,7 @@
           background-size: cover !important;
           background-position: center center !important;
           background-repeat: no-repeat !important;
-          animation-name: drift-horizontal;
-          animation-duration: 120s; /* adiciona movimento no mobile, mesma duração lenta */
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
+          animation: drift-horizontal 120s linear infinite !important;
         }
 
         @keyframes drift-horizontal {
