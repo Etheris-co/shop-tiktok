@@ -30,7 +30,7 @@
         background: url('smoke2.png') repeat;
         background-position: 0 0;
         opacity: 0.25;
-        animation: drift 120s linear infinite;
+        animation: drift 60s linear infinite;
         z-index: 0;
       }
 
@@ -39,11 +39,14 @@
         100% { transform: translate(-25%, -25%); }
       }
 
+      /* SOMENTE MOBILE */
       @media (max-width: 600px) {
         .background {
           width: 100vw !important;
           height: 100vh !important;
-          background: url('smoke2.png') no-repeat center center !important;
+          background-image: url('smoke2.png') !important;
+          background-repeat: repeat !important;
+          background-position: center center !important;
           background-size: cover !important;
           animation: drift-horizontal 60s linear infinite !important;
         }
